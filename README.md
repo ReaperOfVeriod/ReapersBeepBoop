@@ -1,6 +1,6 @@
 # Config
 
-For this code to work you need a config.json file with the following content:
+For this code to work you need a **config.json** file with the following content:
 
 ```json
 {
