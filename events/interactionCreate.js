@@ -46,6 +46,20 @@ module.exports = {
 				}
 			}
 		} else if (interaction.isButton()) {
+			if (interaction.customId === 'acceptnotifications') {
+				const notifiRoleId = "1401849479149391882";
+				try {
+					if (interaction.member.roles.cache.has(notifiRoleId)) {
+						await interaction.reply({ content: 'you already have the notification role!', flags: MessageFlags.Ephemeral });
+					} else {
+						await interaction.member.roles.add(notifyRoleId);
+						await interaction.reply({ content: 'Thank you hope to see you soon in my streams!', flags: MessageFlags.Ephemeral });
+					}
+				} catch (error) {
+					await interaction.reply({ content: 'something went wrong', flags: MessageFlags.Ephemeral });
+					console.log(error);
+				}
+			}
 			if (interaction.customId === 'acceptrules') {
 				const viewerRoleId = "1401153107601395774";
 				try {
