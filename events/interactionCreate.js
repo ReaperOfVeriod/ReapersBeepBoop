@@ -52,7 +52,7 @@ module.exports = {
 					if (interaction.member.roles.cache.has(notifiRoleId)) {
 						await interaction.reply({ content: 'you already have the notification role!', flags: MessageFlags.Ephemeral });
 					} else {
-						await interaction.member.roles.add(notifyRoleId);
+						await interaction.member.roles.add(notifiRoleId);
 						await interaction.reply({ content: 'Thank you hope to see you soon in my streams!', flags: MessageFlags.Ephemeral });
 					}
 				} catch (error) {
